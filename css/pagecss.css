@@ -123,5 +123,40 @@ body{
 /*recomentDetail*/
 .recomentDetail{height:48px;margin-top:10px;background-color:#fff;border:#ccc solid 1px; padding:15px 0px; text-align:center; line-height:48px; font-size:18px;}
 
-
-
+/*silder*/
+.slider{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	height: 350px;
+	width: 1200px;
+	overflow: hidden;
+	position: relative;
+}
+.slider ul{
+	list-style: none;
+	position: absolute;
+	top: 300px;
+	left: 550px;
+}
+.slider li{
+	margin-left: 2px;
+	opacity: .3;
+	filter: alpha(opacity=30);
+	text-align: center;
+	height: 30px; 
+	width: 30px; 
+	float: left; 
+	background-color: #fff;
+	cursor: pointer;
+}
+.slider-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.slider-wrap img{
+	width: 1200px;
+	float: left;
+	border: none;
+}

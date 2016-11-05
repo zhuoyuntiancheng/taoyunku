@@ -53,16 +53,20 @@
           </div>
                  
         <div class="mainMax">
-           <div class="advertesment main"><img src="imges/ad.png"/></div>
-          
-           <div class="introduces">
-             <ul class="mainMax">
-                <li><img src="imges/introduce.jpg"/></li>
-                <li><img src="imges/introduce.jpg"/></li>
-                <li><img src="imges/introduce.jpg"/></li>
-                <li><img src="imges/introduce.jpg"/></li>
-             </ul>
-             <div class="clear"></div>
+ 
+          <div class="slider">
+	        	<div id="slider-wrap" class="slider-wrap">
+	          	<a><img src="imges/introduce.jpg"/></a>
+	            <a><img id="second"/></a>
+	            <a><img id="third"/><a>
+	            <a><img id="fouth"/></a>
+	          </div>
+	          <ul>
+	          	<li id="slider1">1</li>
+	          	<li id="slider2">2</li>
+	          	<li id="slider3">3</li>
+	          	<li id="slider4">4</li>
+	          </ul>
           </div>
       
             <div class="fastSeleter main">
@@ -340,5 +344,34 @@
 </div>
 <!--底部-->
 <div class="bottomArea"></div>
+
+<script type="text/javascript">
+var point = [document.getElementById("slider1"),document.getElementById("slider2"),
+document.getElementById("slider3"),document.getElementById("slider4")];
+	window.onload = function(){
+		flag = 0;
+		obj1 = document.getElementById("slider-wrap");
+		point[0].style.backgroundColor = "#666666";
+		time = setInterval("turn();",1500);
+		
+		document.getElementById("second").src = "imges/good/default.jpg";
+		document.getElementById("third").src = "imges/good/inco.jpg";
+		document.getElementById("fouth").src = "imges/good/mison.jpg";
+	}
+	function turn(value){
+		if(value != null){
+			flag = value -2
+		}
+		if(flag < 3)
+		flag++;
+		else
+		flag =0;
+		obj1.style.top = flag *(-1200)+"px";
+		for (var j = 0; j < point.length; j++) { 
+    point[j].style.backgroundColor = "#ffffff"; 
+   } 
+   point[flag].style.backgroundColor = "#666666"; 
+	}
+</script>
 </body>
 </html>
